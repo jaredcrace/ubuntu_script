@@ -3,9 +3,9 @@ import subprocess
 
 
 
-def testfunc():
-    print("this is a test function")
-    process = subprocess.run(['echo', 'Even more output'], 
+def run_a_command(arguments):
+    print('running command: %s' % arguments)
+    process = subprocess.run(arguments, 
                          stdout=subprocess.PIPE, 
                          universal_newlines=True)
     print(process)
@@ -29,7 +29,5 @@ if __name__ == '__main__':
                         help='verbose output',
                         default=None)
 
-    args = parser.parse_args()
-
-    testfunc()
+    run_a_command(['ls', '-l'])
 
