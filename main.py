@@ -2,7 +2,9 @@ import argparse
 
 
 def testfunc():
-    
+    print("this is a test function")
+
+
 
 if __name__ == '__main__':
     description_text = '''
@@ -24,10 +26,5 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    print('here')
-
-    print(args)
-
-
-    print('end')
+    testfunc()
 
