@@ -1,8 +1,10 @@
 import argparse
-
+import os
 
 def testfunc():
     print("this is a test function")
+    os.system('ls -l')
+
 
 
 
