@@ -4,7 +4,12 @@ import subprocess
 
 
 def run_a_command(arguments):
-    print('running command: %s' % arguments)
+    print(arguments)
+    ans = input('The above command will be run, press Y/y to continue or any other key to cancel: ')
+    if ans not in ('Y', 'y'):
+        print('canceling the command')
+        return
+
     process = subprocess.run(arguments, 
                          stdout=subprocess.PIPE, 
                          universal_newlines=True)
