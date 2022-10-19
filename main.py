@@ -1,11 +1,14 @@
 import argparse
-import os
+import subprocess
+
+
 
 def testfunc():
     print("this is a test function")
-    os.system('ls -l')
-
-
+    process = subprocess.run(['echo', 'Even more output'], 
+                         stdout=subprocess.PIPE, 
+                         universal_newlines=True)
+    print(process)
 
 
 if __name__ == '__main__':
